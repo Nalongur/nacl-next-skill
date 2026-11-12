@@ -1,0 +1,786 @@
+{
+  "manifestVersion": 1,
+  "distribution": "nacl-ui",
+  "skillVersion": "0.1.0",
+  "templateVersion": 1,
+  "pageSchemaVersion": 1,
+  "sdk": {
+    "name": "nacl-next-sdk",
+    "version": "0.1.0",
+    "git": "https://github.com/Nalongur/nacl-next-sdk.git",
+    "rev": "160fea422ab679bc5d8fa74c6a4035264c718db5",
+    "contractsSha256": "c8c0b2d9f73b0051817783c68710a6ea54e4cb6bb7a73ffa0900b084736e2e3d"
+  },
+  "compatibility": {
+    "file": "assets/compatibility.json",
+    "sha256": "d286733dbdb8e25e7356641f0a0988f9376a6bda90e6df1b9ead8d0b02528516"
+  },
+  "source": {
+    "repo": "nacl-next-skill",
+    "head": null,
+    "dirty": false,
+    "inputSha256": "d2bc6de988aad825283f48fcabbc6a0c9585f785ed3845f3a9a723f3183ef435"
+  },
+  "paths": {
+    "starter": "assets/starter",
+    "templates": "assets/templates",
+    "schemas": "schemas",
+    "sdk": "assets/sdk",
+    "shell": "assets/shell",
+    "compatibility": "assets/compatibility.json",
+    "scripts": "scripts",
+    "tests": "tests"
+  },
+  "method": "byte copies from templates/s3, sdk/ and apps/s1-shell; generated references; sha256 per file; critical = assets/, schemas/, scripts/, generated references",
+  "files": {
+    "LICENSE": {
+      "sha256": "192581b0f6b225e5fdd125f0dd7c99f8c24bbfb051b0a5e90bd8e1c713901bf8",
+      "bytes": 1079,
+      "critical": true
+    },
+    "README.md": {
+      "sha256": "167aad153304befa2acefe7cf3db6a668456a55c9d489fd3f127df2252b2b8e9",
+      "bytes": 5575,
+      "critical": true
+    },
+    "SKILL.md": {
+      "sha256": "024feb814937d4cebaa6df382813a096905cb42409d5bb7584c04bf4e99e59ee",
+      "bytes": 8215,
+      "critical": true
+    },
+    "THIRD-PARTY-NOTICES.md": {
+      "sha256": "6747cfd01c210825b7c7cfb9ccac343c3b5616e103c362c70136b0e9d259b1bb",
+      "bytes": 1713,
+      "critical": true
+    },
+    "assets/compatibility.json": {
+      "sha256": "d286733dbdb8e25e7356641f0a0988f9376a6bda90e6df1b9ead8d0b02528516",
+      "bytes": 1745,
+      "critical": true
+    },
+    "assets/sdk/contracts/AdvancedSettings.ts": {
+      "sha256": "4a26f80e11e03c766a7edf9c1fe0e0e8feaa41d070146cd02a0bd966996065d3",
+      "bytes": 214,
+      "critical": true
+    },
+    "assets/sdk/contracts/Artifact.ts": {
+      "sha256": "edffa070b7c181d08c5cbea8d5b23f6ca7d3ca162d415c61bf0bf49a9571b875",
+      "bytes": 385,
+      "critical": true
+    },
+    "assets/sdk/contracts/ArtifactSource.ts": {
+      "sha256": "8737722daf0cef5fdcd87b5bc22210243e89018559849baddedf6ca42e61f8ad",
+      "bytes": 216,
+      "critical": true
+    },
+    "assets/sdk/contracts/CapabilityDescriptor.ts": {
+      "sha256": "daf0c8cb4469e82f825da4ba126aa0a2d91da951fe8364fc63558414665c181c",
+      "bytes": 547,
+      "critical": true
+    },
+    "assets/sdk/contracts/ConflictPolicy.ts": {
+      "sha256": "3dee95df4abb7424a2dfd7cee1427427d66cc0bc9589f3b011c9006f5256dd81",
+      "bytes": 177,
+      "critical": true
+    },
+    "assets/sdk/contracts/ContentDigest.ts": {
+      "sha256": "080c74013d21ee72884e3fde0cd43d8f221a4cb65486485b020999027d8a3d9a",
+      "bytes": 277,
+      "critical": true
+    },
+    "assets/sdk/contracts/ContentManifest.ts": {
+      "sha256": "685e58d0283942c84d8365c378e048094644950732d395d916652d16a5ca3728",
+      "bytes": 400,
+      "critical": true
+    },
+    "assets/sdk/contracts/ContentRequest.ts": {
+      "sha256": "1927b06b8b8c8364a3bd462c6e7702d6e6dfa3ed3d60beab4a2f9044f641dfc8",
+      "bytes": 304,
+      "critical": true
+    },
+    "assets/sdk/contracts/DigestAlgorithm.ts": {
+      "sha256": "1a05a9dd067844308c0dca505398406a232675b0b5c0ce89ca42c06f9b77dec6",
+      "bytes": 159,
+      "critical": true
+    },
+    "assets/sdk/contracts/DigestSpec.ts": {
+      "sha256": "b993033d0d49580a193f193ed823f80acbe38f11a4256f088fef496b6220e4a0",
+      "bytes": 390,
+      "critical": true
+    },
+    "assets/sdk/contracts/DisplaySettings.ts": {
+      "sha256": "6a584babd9d517eea3b6e36f4539375f89bb432ef0da81c305beb4ce207edae4",
+      "bytes": 242,
+      "critical": true
+    },
+    "assets/sdk/contracts/GameLoader.ts": {
+      "sha256": "2dc1024ae2885a067d4f9d0c0b6b7ad712127e6f7da4dc86757bc91eba02cedb",
+      "bytes": 190,
+      "critical": true
+    },
+    "assets/sdk/contracts/IdentityKind.ts": {
+      "sha256": "3feb6f50c97d33fdc57c32a88832ac03bdf7307c4a6cefc7e1b9ac6271792a96",
+      "bytes": 300,
+      "critical": true
+    },
+    "assets/sdk/contracts/IdentitySummary.ts": {
+      "sha256": "4f7796fd4ac510befe60557ffbd9770af17554b1cb5120ac26ed20a29e2eebda",
+      "bytes": 435,
+      "critical": true
+    },
+    "assets/sdk/contracts/InstallPlan.ts": {
+      "sha256": "768e27d7c7b1bb19262919f6fcbf6408664e3f3f497baca985be590edd097578",
+      "bytes": 425,
+      "critical": true
+    },
+    "assets/sdk/contracts/InstallResult.ts": {
+      "sha256": "2e1e751b9d7c7182277eff5ca5341bf7a7edf525b01433fb91063dc77bc38939",
+      "bytes": 228,
+      "critical": true
+    },
+    "assets/sdk/contracts/InstallationInfo.ts": {
+      "sha256": "b4c0df69ee61ff2d90c3d62cb06539848457f07d383da9a17a2515f6ee5832a9",
+      "bytes": 267,
+      "critical": true
+    },
+    "assets/sdk/contracts/InstallationState.ts": {
+      "sha256": "b58f7834825004471757284a109779f5948bf9377d1ddc04736cbd24f3b46a72",
+      "bytes": 166,
+      "critical": true
+    },
+    "assets/sdk/contracts/InstanceConfig.ts": {
+      "sha256": "dcf9c662e252768225429165f33289c875ee49d30b22ba4d0640a174762e0d21",
+      "bytes": 730,
+      "critical": true
+    },
+    "assets/sdk/contracts/JavaRuntime.ts": {
+      "sha256": "26c4b86dfacc23c25a4040aac932729089d6d0e7ef706c9d9e26bbff944a2596",
+      "bytes": 308,
+      "critical": true
+    },
+    "assets/sdk/contracts/JavaSelection.ts": {
+      "sha256": "f6ee403f70c71106122fd964996872cfadf505a4b5a3cdb895c868be02b9f109",
+      "bytes": 196,
+      "critical": true
+    },
+    "assets/sdk/contracts/LaunchPreview.ts": {
+      "sha256": "aa68cd531834d3e7be732758aabf589975612f4ad35115d1f70c131f727e096a",
+      "bytes": 608,
+      "critical": true
+    },
+    "assets/sdk/contracts/LaunchSpec.ts": {
+      "sha256": "f8ba3ae70d0a8e7f2becfa5d1e1fdc94bd5a4d5099d3d4d906ede16a52570f5d",
+      "bytes": 353,
+      "critical": true
+    },
+    "assets/sdk/contracts/LaunchedProcess.ts": {
+      "sha256": "46652cbe60de21430d3997d349b2442d235ac11444c0d95ce71aa12eb7dff369",
+      "bytes": 225,
+      "critical": true
+    },
+    "assets/sdk/contracts/LoaderConfig.ts": {
+      "sha256": "c4b7d7a1daf2fae6bdcd6a596d97b1dc8084a2c3f18f3aa4b7602dd544f80924",
+      "bytes": 258,
+      "critical": true
+    },
+    "assets/sdk/contracts/LocalProfile.ts": {
+      "sha256": "65cc2b01bc3eba2a2307cc70c037e838bfbf8ecfdcedeb5db59e0e97e57d33ba",
+      "bytes": 323,
+      "critical": true
+    },
+    "assets/sdk/contracts/LoginHandle.ts": {
+      "sha256": "268aadb246339aad91255af944dd72475610d92a0610f6a30d0baaf8ef0187f4",
+      "bytes": 265,
+      "critical": true
+    },
+    "assets/sdk/contracts/ManagedRecord.ts": {
+      "sha256": "43b9d7ac497e48a3058ce28a32464e49e48d3b311c3bf03413967dbaea766003",
+      "bytes": 307,
+      "critical": true
+    },
+    "assets/sdk/contracts/ManifestFile.ts": {
+      "sha256": "54338031149bac056c8f53703b845b697b5e214013bbe9992957ce6088614100",
+      "bytes": 186,
+      "critical": true
+    },
+    "assets/sdk/contracts/MemorySettings.ts": {
+      "sha256": "3c20059bbeb9271a59c0a6cde63deb09d63ffa903e21d9bb6bd2c82f3dce0fef",
+      "bytes": 182,
+      "critical": true
+    },
+    "assets/sdk/contracts/MicrosoftAccount.ts": {
+      "sha256": "d83af26fbecc0409298cf7dde91237fa0046f8cfa29cd2203d551fc7ac0cd546",
+      "bytes": 646,
+      "critical": true
+    },
+    "assets/sdk/contracts/MinecraftCape.ts": {
+      "sha256": "80ea660b03a3427355e46f368e86f63432ed07386873df762bb9e93124e471f0",
+      "bytes": 183,
+      "critical": true
+    },
+    "assets/sdk/contracts/MinecraftSkin.ts": {
+      "sha256": "f72906a754e53308c21643b1eedc0049bc60e671b51f85ce23540293ec1dc623",
+      "bytes": 183,
+      "critical": true
+    },
+    "assets/sdk/contracts/PlannedFile.ts": {
+      "sha256": "70ff918e0929b5040c27d554a53860b9ad53870af8e5ccbc1d02d4bd8ab1f428",
+      "bytes": 389,
+      "critical": true
+    },
+    "assets/sdk/contracts/ProcessInfo.ts": {
+      "sha256": "c45f8af03b1ceeb6f222b0b041c12455441ec7303f179f5bb5036bc92d1341b1",
+      "bytes": 223,
+      "critical": true
+    },
+    "assets/sdk/contracts/ResourceLimits.ts": {
+      "sha256": "adc0ceed928780626c2cacade3f73a437f8b402422b642b6d12570a6c77c13a5",
+      "bytes": 313,
+      "critical": true
+    },
+    "assets/sdk/contracts/SdkContext.ts": {
+      "sha256": "59a527fe200af5f2b7c524034ccf6ea5bfb7c2ca575779998caeca0c1c8fd523",
+      "bytes": 748,
+      "critical": true
+    },
+    "assets/sdk/contracts/SdkError.ts": {
+      "sha256": "56387a798766f7592d16ad6ff0df923af3a12eada20663fb2bff9fb1d8bee99b",
+      "bytes": 560,
+      "critical": true
+    },
+    "assets/sdk/contracts/WindowMode.ts": {
+      "sha256": "84c68a5978772be694def0ec352b2a576222e706c91846a486b9d928f15cb1e4",
+      "bytes": 176,
+      "critical": true
+    },
+    "assets/sdk/contracts/serde_json/JsonValue.ts": {
+      "sha256": "17976c59bc589f68c3454d638bf3707b67a1897d9590a5101a9677958d6c6dc9",
+      "bytes": 221,
+      "critical": true
+    },
+    "assets/shell/Cargo.lock": {
+      "sha256": "703815a7ec4a03c8c012d7aa57fdd4814aada660b56c94db7726574f45aaec3f",
+      "bytes": 117770,
+      "critical": true
+    },
+    "assets/shell/contracts/HostPreferences.ts": {
+      "sha256": "53ada9010e1ce2bce6a1708ee32c828839a5de6af8d404c9cf390039e7883608",
+      "bytes": 250,
+      "critical": true
+    },
+    "assets/shell/contracts/IdentitySelector.ts": {
+      "sha256": "5ae48741af1992f9f844d2e1056f2838856ba97439358772ab10371a86d88bab",
+      "bytes": 394,
+      "critical": true
+    },
+    "assets/shell/contracts/ProcessStatusDto.ts": {
+      "sha256": "c62feba2eb7c65585c44185f44a86b7ef13abbb9eb1b5e3769b23a928248ff5f",
+      "bytes": 186,
+      "critical": true
+    },
+    "assets/shell/contracts/ProjectInfo.ts": {
+      "sha256": "a0e28617449d9d83836f21755c4de8c9e09cd7b53da5a9034d87303b640942eb",
+      "bytes": 373,
+      "critical": true
+    },
+    "assets/shell/contracts/SdkError.ts": {
+      "sha256": "56387a798766f7592d16ad6ff0df923af3a12eada20663fb2bff9fb1d8bee99b",
+      "bytes": 560,
+      "critical": true
+    },
+    "assets/shell/contracts/TaskRecord.ts": {
+      "sha256": "fe69f4d1e48f328539ac0ab2a6ebed9983e18d485aaf358b8bb1084e0fda785c",
+      "bytes": 573,
+      "critical": true
+    },
+    "assets/shell/contracts/TaskState.ts": {
+      "sha256": "57374e7d0227cb0ec71ac7a535b68d0ae649501a61e24b794fbbd7702ebd06d0",
+      "bytes": 195,
+      "critical": true
+    },
+    "assets/shell/contracts/serde_json/JsonValue.ts": {
+      "sha256": "17976c59bc589f68c3454d638bf3707b67a1897d9590a5101a9677958d6c6dc9",
+      "bytes": 221,
+      "critical": true
+    },
+    "assets/shell/src-tauri/Cargo.toml": {
+      "sha256": "52e46f66da00ec3c0e44cdb981d57f0816e15a1c039a7aea358bc3e2d7d0c1c0",
+      "bytes": 1055,
+      "critical": true
+    },
+    "assets/shell/src-tauri/build.rs": {
+      "sha256": "487059eaf8a947b80f20a9aacac038a5047b2ad69d2401b827376c67d6fe847f",
+      "bytes": 39,
+      "critical": true
+    },
+    "assets/shell/src-tauri/capabilities/main.json": {
+      "sha256": "4d8ae7c3208db1afac8e9e9d37ab4832f2e2ef4c511a1257ae8e050caf860f69",
+      "bytes": 362,
+      "critical": true
+    },
+    "assets/shell/src-tauri/examples/export_contracts.rs": {
+      "sha256": "6ba7887bf1d8b839464d15f50b6c4f09282c75a1cd59ab51728225d262e613ae",
+      "bytes": 1360,
+      "critical": true
+    },
+    "assets/shell/src-tauri/icons/icon.ico": {
+      "sha256": "df6e672b8f092653527951b17398aa33b8f3ac74cbf5f2e1aecab723d6768ecd",
+      "bytes": 19520,
+      "critical": true
+    },
+    "assets/shell/src-tauri/icons/make_icon.py": {
+      "sha256": "d832707bafa4c2d214ef59f57ee58481bbec1a789d7efec5206eeb3a91a161ee",
+      "bytes": 1221,
+      "critical": true
+    },
+    "assets/shell/src-tauri/src/commands.rs": {
+      "sha256": "2e11885dccdcb67452f3362d430804c83529ac2f8b4263a600bc152bc90568c8",
+      "bytes": 20146,
+      "critical": true
+    },
+    "assets/shell/src-tauri/src/lib.rs": {
+      "sha256": "dd6a61a5bc68c5a406b2018b77598aa18c974d5172ec8bb7d9c1af5aa99408cf",
+      "bytes": 6088,
+      "critical": true
+    },
+    "assets/shell/src-tauri/src/main.rs": {
+      "sha256": "6d4bb779f1966df08bc3fb8da80b2b8391d28b363240332a1988cbcd8b4d28f6",
+      "bytes": 113,
+      "critical": true
+    },
+    "assets/shell/src-tauri/src/mode.rs": {
+      "sha256": "aeccc295ad1b9eac99045af3334c3a6c99585543219c6c8538f34dd67bd415d7",
+      "bytes": 4223,
+      "critical": true
+    },
+    "assets/shell/src-tauri/src/preferences.rs": {
+      "sha256": "89d6827c114e6407d66b5257d271b9047f4de48976f405dcea075526db5cf454",
+      "bytes": 3257,
+      "critical": true
+    },
+    "assets/shell/src-tauri/src/state.rs": {
+      "sha256": "54630695e2a2dc6f9220756f9fa6922528a106cd8b6e3142d1bb9997f1d3319b",
+      "bytes": 2292,
+      "critical": true
+    },
+    "assets/shell/src-tauri/src/tasks.rs": {
+      "sha256": "82bb7c506d17bb39734bca0d44ef44900a3c80a983d434a8e49d7634cc535c48",
+      "bytes": 9408,
+      "critical": true
+    },
+    "assets/shell/src-tauri/tauri.conf.json": {
+      "sha256": "38e2817e55cbb01e8698c32a43d68a2f5ed651e335e4c88f08bcfacb001432b4",
+      "bytes": 650,
+      "critical": true
+    },
+    "assets/shell/src-tauri/tests/d_coexistence.rs": {
+      "sha256": "e1c88099f7718f195d19deba9d5fae0d0d534a693434031a08cca8a89760618b",
+      "bytes": 6567,
+      "critical": true
+    },
+    "assets/shell/src-tauri/tests/host_preferences.rs": {
+      "sha256": "21f3f671faeb272a0136f3d64bf082d9e149fb5a85589641ebf0843cd48a70ae",
+      "bytes": 5090,
+      "critical": true
+    },
+    "assets/shell/src-tauri/tests/instance_ipc.rs": {
+      "sha256": "ba8a2a77d163c2caa25025cbcb43631d76d159524d95d9200c47f28ef6144177",
+      "bytes": 3794,
+      "critical": true
+    },
+    "assets/starter/.gitignore": {
+      "sha256": "ff72ec00070f47cc93444029efc18ea3b5689dd78dfb11708c269213d6f9375f",
+      "bytes": 96,
+      "critical": true
+    },
+    "assets/starter/index.html": {
+      "sha256": "9681fc1f8a123d2726140cd7aabbb745fbaa3d2901a641820c37ccb94135c268",
+      "bytes": 297,
+      "critical": true
+    },
+    "assets/starter/package-lock.json": {
+      "sha256": "c88fbba3b2b72ad1fd7815ea8c61f16199296b36da1b5e9cd9ae5d505d239849",
+      "bytes": 70960,
+      "critical": true
+    },
+    "assets/starter/package.json": {
+      "sha256": "032b5473747f360f6e778ab0c59eca7c9cbdd6919b2dcfed075dd747cfed96a8",
+      "bytes": 833,
+      "critical": true
+    },
+    "assets/starter/scripts/build-validators.mjs": {
+      "sha256": "8c45ab5f1b82c028a6ad564af5c7af1583186f799da093488f16a1cd30d10591",
+      "bytes": 3484,
+      "critical": true
+    },
+    "assets/starter/scripts/validate.mjs": {
+      "sha256": "f46b0e030d80804b40ce79f9988c7b7bd8f5740d01cd935ae0cb56b911c8b147",
+      "bytes": 7417,
+      "critical": true
+    },
+    "assets/starter/src/App.vue": {
+      "sha256": "60b5e89463ce1c04f77be2dab428239f3cecd2ce9c2a6fdb2c2423354d8d068e",
+      "bytes": 3988,
+      "critical": true
+    },
+    "assets/starter/src/adapter/index.ts": {
+      "sha256": "ae90be6081958ffe170100bf8aa901d291baf486a358feca742c1198f6f6f2fc",
+      "bytes": 754,
+      "critical": true
+    },
+    "assets/starter/src/adapter/ipc.ts": {
+      "sha256": "6c69868f03d62b4f9f286cc62db59ef049dfb4d64f237356c8e0c6c59e7ccb06",
+      "bytes": 3878,
+      "critical": true
+    },
+    "assets/starter/src/adapter/mock.ts": {
+      "sha256": "f9b1f1712a9d517283d7b7e388cf68d3f775900634eb79a7fefa82913ac663c2",
+      "bytes": 14663,
+      "critical": true
+    },
+    "assets/starter/src/adapter/types.ts": {
+      "sha256": "fb39c1b87b5508cf7ce3b905508ba43c003bddcfef7dcfe46d64765e2ce67032",
+      "bytes": 4571,
+      "critical": true
+    },
+    "assets/starter/src/boot-config.ts": {
+      "sha256": "6c858d8b3125b33c3463e690d4cd0c24ee1b810455525ece206170274f8cd367",
+      "bytes": 488,
+      "critical": true
+    },
+    "assets/starter/src/boot.ts": {
+      "sha256": "52175ac70b183d5cd3dd55400bf659e3fd770c1e509fd0649adfad8ee1311c17",
+      "bytes": 1089,
+      "critical": true
+    },
+    "assets/starter/src/components/ConfigError.vue": {
+      "sha256": "690b6c9cc912d531157655ddd68d53f51ead6d09afc1500e061c09502dbbd175",
+      "bytes": 1404,
+      "critical": true
+    },
+    "assets/starter/src/components/ErrorBanner.vue": {
+      "sha256": "45f56ffc6c1030765009a2f66abbf0e411f39ece9ef8d2fc582c010373211ec5",
+      "bytes": 535,
+      "critical": true
+    },
+    "assets/starter/src/components/HostPreferences.vue": {
+      "sha256": "2cd33747890bf5d080cc86ec448ca7c0e4e7791983ec1756d5e2295d34cd0ebf",
+      "bytes": 3808,
+      "critical": true
+    },
+    "assets/starter/src/components/IdentityPicker.vue": {
+      "sha256": "b11d159e8ac6335f7577a10a5cd65ea674063f125675bd521cc083640c615bbb",
+      "bytes": 4521,
+      "critical": true
+    },
+    "assets/starter/src/components/InstanceDetails.vue": {
+      "sha256": "2944203697de2f437d22d76d9b5e05cb3f15c8916e25e17104628adf6ec1e950",
+      "bytes": 5020,
+      "critical": true
+    },
+    "assets/starter/src/components/InstanceList.vue": {
+      "sha256": "3edd87c3811c68fbf20d3ca241dc32a52b450f418fee0368fb8898d4fcf5e550",
+      "bytes": 8319,
+      "critical": true
+    },
+    "assets/starter/src/components/InstanceSettings.vue": {
+      "sha256": "edfa1e2fc083ed49961b262f2f5c3cc83f5c0a4a47125999168c9839df38461e",
+      "bytes": 6884,
+      "critical": true
+    },
+    "assets/starter/src/components/JavaPanel.vue": {
+      "sha256": "0896a89bfb0342e5d8aebb7cd143058acfd8d73ad445ddbc25003fd5fc11fa6c",
+      "bytes": 5413,
+      "critical": true
+    },
+    "assets/starter/src/components/LaunchPanel.vue": {
+      "sha256": "71d628413eb5564bbc771fcc5eb2a2782da27715b2cc3f400f1040db8d4af8e6",
+      "bytes": 6493,
+      "critical": true
+    },
+    "assets/starter/src/components/LocalProfiles.vue": {
+      "sha256": "18fbd252b79e1bb7a740cf9be0d3aa3c190490e5402302ec73aadd7ba264d0e2",
+      "bytes": 6445,
+      "critical": true
+    },
+    "assets/starter/src/components/LogViewer.vue": {
+      "sha256": "89780c9ec5b5dcb78bce66816573f4b0bab65f3f50eb7a015e78037213ce26b4",
+      "bytes": 3565,
+      "critical": true
+    },
+    "assets/starter/src/components/MicrosoftIdentity.vue": {
+      "sha256": "70396bc3adfacb533d814bd46ac3ff48ab5f824627737a89081155e5f5356216",
+      "bytes": 6501,
+      "critical": true
+    },
+    "assets/starter/src/components/StatePanel.vue": {
+      "sha256": "6426d1b35e4251c9815b5e8e31dde2b1c8dd0917471da29cf570c1743b8c6326",
+      "bytes": 665,
+      "critical": true
+    },
+    "assets/starter/src/components/StatusBadges.vue": {
+      "sha256": "f6710607b04ecc50b477787eb34cf68d3fdc7b6ce2c768a3bdafbab387963fec",
+      "bytes": 775,
+      "critical": true
+    },
+    "assets/starter/src/components/TaskMonitor.vue": {
+      "sha256": "198594d3044bc327c6461075d2120a257eb7f87d72f0995ca59ae37e56a53564",
+      "bytes": 6287,
+      "critical": true
+    },
+    "assets/starter/src/contract/page.ts": {
+      "sha256": "68030d8627c137ccf792688775a4ba623ae72ec4db4292fab83192ae8058ed3d",
+      "bytes": 1790,
+      "critical": true
+    },
+    "assets/starter/src/contract/registry.mjs": {
+      "sha256": "abff9ebcc787a9773972a360e21d1719e8c4ea79f73a4f557afd513e7e0d6a27",
+      "bytes": 12288,
+      "critical": true
+    },
+    "assets/starter/src/layouts/SidebarLayout.vue": {
+      "sha256": "60f1537028c3d1f04378141896e5562c3d6586df2238ea28cfa295a481c5091b",
+      "bytes": 1176,
+      "critical": true
+    },
+    "assets/starter/src/layouts/StudioLayout.vue": {
+      "sha256": "f59637c40b813b9c123d734c894666ca6c0533228f386d093829f810f557526f",
+      "bytes": 1405,
+      "critical": true
+    },
+    "assets/starter/src/main.ts": {
+      "sha256": "41a79ccb7d440dcb55dd3a28c6a62056c59b4e877d9fcbe17c9cd5d7fbbe2c14",
+      "bytes": 115,
+      "critical": true
+    },
+    "assets/starter/src/renderer/BlockHost.vue": {
+      "sha256": "cfd45899a7cc8f455ec6d30e205c42aaf0361bf81e4ab62a42cf8584de60d582",
+      "bytes": 6682,
+      "critical": true
+    },
+    "assets/starter/src/renderer/PageRenderer.vue": {
+      "sha256": "81b97c200c55950de208d944e0c841362fc33729e8c32966e4b09ee36ad70a45",
+      "bytes": 14090,
+      "critical": true
+    },
+    "assets/starter/src/renderer/bindings.ts": {
+      "sha256": "942e38129d4a8b4476908dd88c4629be8a074f0caf60d68039570834eb600def",
+      "bytes": 1868,
+      "critical": true
+    },
+    "assets/starter/src/renderer/context.ts": {
+      "sha256": "e233ab4ae06d8ed8f19e8bac6911112e0cd84f746840b5f292447bdf8a58ab61",
+      "bytes": 605,
+      "critical": true
+    },
+    "assets/starter/src/renderer/labels.ts": {
+      "sha256": "f126531f7a3c1e98feb1a4f2c85155e29d55f624d1b086b3b67783dfe4b3ca25",
+      "bytes": 1362,
+      "critical": true
+    },
+    "assets/starter/src/state/actions.ts": {
+      "sha256": "08608e4049d7e21ba3b80e5b7e0e9f3aa44598e4989f7b1d01b2158fdee7fdf0",
+      "bytes": 26810,
+      "critical": true
+    },
+    "assets/starter/src/state/advanced-arguments.ts": {
+      "sha256": "52bd79b3bad643bdb5a4ff107fc18706ce91122ae1fdc0fbd4ff0c86376475b3",
+      "bytes": 189,
+      "critical": true
+    },
+    "assets/starter/src/state/instance-name.ts": {
+      "sha256": "a9851f4705bf0944b97b882166f80acc3f8465ff0289dcbdd670768a9c193bdb",
+      "bytes": 365,
+      "critical": true
+    },
+    "assets/starter/src/state/store.ts": {
+      "sha256": "e6774b956d4034adcbbf6aad737628beb29cacf6ec98d1255a53d95c53f08ddf",
+      "bytes": 5751,
+      "critical": true
+    },
+    "assets/starter/src/state/taskFlow.ts": {
+      "sha256": "16d767bb91dc20f805a80effc3d880b78805e85326feed26e701c5d5298e4f04",
+      "bytes": 10825,
+      "critical": true
+    },
+    "assets/starter/src/style.css": {
+      "sha256": "6b3b59532d594196e7ee46a21da959162cf0671020e0b3748418031be6f6a5fb",
+      "bytes": 26104,
+      "critical": true
+    },
+    "assets/starter/src/validation/generated/page-validator.mjs": {
+      "sha256": "963d4d873ecd27920c06c6c981403547de59de8f75fd662c3fe32aaaf8bd8273",
+      "bytes": 26182,
+      "critical": true
+    },
+    "assets/starter/src/validation/generated/project-validator.mjs": {
+      "sha256": "a9177a4b6e1c937bd8aee4da0682567e07b9f620f4aa22ddcb0b8318f10c1720",
+      "bytes": 29739,
+      "critical": true
+    },
+    "assets/starter/src/validation/validate-page.mjs": {
+      "sha256": "489eb5acd0972c9fe175bbfe3d70003c481c135278b6352df7137f7f62a654aa",
+      "bytes": 16320,
+      "critical": true
+    },
+    "assets/starter/src/vite-env.d.ts": {
+      "sha256": "57e018e6ce5d7941ca45e055ce81799b554f4bd8f511bbbef4c8353da1f3ba0c",
+      "bytes": 171,
+      "critical": true
+    },
+    "assets/starter/tests/blockhost-advanced.test.ts": {
+      "sha256": "53ac92de8913330240fd65c10aa84439cc9c51a404093e280e9775e68be468b3",
+      "bytes": 1330,
+      "critical": true
+    },
+    "assets/starter/tests/boot-validation.test.ts": {
+      "sha256": "b20a862ca53049708344abaf22447b5cc67704e3ea6a059fff37268d50863fc4",
+      "bytes": 4419,
+      "critical": true
+    },
+    "assets/starter/tests/helpers/fake-adapter.ts": {
+      "sha256": "c8c08ff427cc134222ba2cd187d159c3c1fbb823eba03cbb25d1af3bdb8627a7",
+      "bytes": 9759,
+      "critical": true
+    },
+    "assets/starter/tests/host-preferences.test.ts": {
+      "sha256": "321ea0772b3dd0f0392647a0c8def53c9af408e70bc000b5db64c53dd015ab7d",
+      "bytes": 3926,
+      "critical": true
+    },
+    "assets/starter/tests/instance-details.test.ts": {
+      "sha256": "4a7f52e8f96561e30be8e6095b713c82c21a976cf05ce2f593e468340a179034",
+      "bytes": 3401,
+      "critical": true
+    },
+    "assets/starter/tests/instance-settings.test.ts": {
+      "sha256": "8639445f47a6e333a2faac742feb951a7343b260d75dd69e202e292c00012445",
+      "bytes": 7027,
+      "critical": true
+    },
+    "assets/starter/tests/java-auto.test.ts": {
+      "sha256": "c72e9d4e3095456960cd8a3a79f4116b0eb220cb589a804b917ba2068119ee74",
+      "bytes": 3925,
+      "critical": true
+    },
+    "assets/starter/tests/nacl-navigation.test.ts": {
+      "sha256": "a64f4ebd4d8a7db8e7a429945978b04fba4db0cab56153451280d1c640a53688",
+      "bytes": 8157,
+      "critical": true
+    },
+    "assets/starter/tests/task-recovery.test.ts": {
+      "sha256": "dac1658d3e1a72f7a694d49490906a3ba6994c9cd04cc2ce3d4476ffd14c7a7a",
+      "bytes": 45472,
+      "critical": true
+    },
+    "assets/starter/tsconfig.json": {
+      "sha256": "d7a1ca8e5af9ebfa5e46b2deb9bc1624ef1ab8302f0dd8232c345f562ccb0c51",
+      "bytes": 530,
+      "critical": true
+    },
+    "assets/starter/vite.config.ts": {
+      "sha256": "c184bf00e4fce444bb2f2364ef289c511ed2843d9040cae1610cc59d4bb4ea54",
+      "bytes": 279,
+      "critical": true
+    },
+    "assets/templates/nacl.json": {
+      "sha256": "da94ebb806da6dd8f546597cd7d318974e9268e7d599b4b027cf1023cebfa7ed",
+      "bytes": 6020,
+      "critical": true
+    },
+    "assets/templates/sidebar.json": {
+      "sha256": "c736b036b15e165926a10629bf797393bc878eaa26c637288da59ace64def76c",
+      "bytes": 5013,
+      "critical": true
+    },
+    "assets/templates/studio.json": {
+      "sha256": "341006fcff2bbee6fd7b5af9276f224ce52f69bc9521ffd12fc4561119241053",
+      "bytes": 5231,
+      "critical": true
+    },
+    "assets/validator-lock.json": {
+      "sha256": "5efb02b57b458bfe18c8c3bcce37edeb155293a254f8ba5bc499da0e20692680",
+      "bytes": 466,
+      "critical": true
+    },
+    "references/boundaries.md": {
+      "sha256": "aec83d53419850f3f09760188626c80f4d2f96045681353288466ecde864f697",
+      "bytes": 2848,
+      "critical": true
+    },
+    "references/compatibility.generated.md": {
+      "sha256": "96b480d95dc68924f1337d54e94dae7ff2eb964cc29fb29f5d358d1c84b08d63",
+      "bytes": 1480,
+      "critical": true
+    },
+    "references/errors.generated.md": {
+      "sha256": "df170a1781e9a2f636a5cdd52977794051c96d5bb85ab8ecefd743d6b539ea93",
+      "bytes": 12363,
+      "critical": true
+    },
+    "references/modes.md": {
+      "sha256": "77f37be30fc4f2398b30b8bd6b1c78ae86659ab37ca7191d9030fb404dd341f6",
+      "bytes": 2941,
+      "critical": true
+    },
+    "references/nacl-template.md": {
+      "sha256": "3180a0f6135c1b99abed3149ab180829eb1db443edfc6946b707e814c5d5436e",
+      "bytes": 3406,
+      "critical": false
+    },
+    "references/registry.generated.md": {
+      "sha256": "bfdc364eee0da84fc90c800d6d2c3d0cda2303dbe0433cb8cba35fa8682cb8a8",
+      "bytes": 14123,
+      "critical": true
+    },
+    "references/troubleshooting.md": {
+      "sha256": "abce634894c9c02eb8226d19db44d1648eb925a4790fd6ee46af4ee732022669",
+      "bytes": 4421,
+      "critical": true
+    },
+    "references/workflow.md": {
+      "sha256": "c6809697641a998ff6293153ac4a8cdf76897d6af6d8d0b7f955d0e2c0bcf3d4",
+      "bytes": 6347,
+      "critical": true
+    },
+    "schemas/page.schema.json": {
+      "sha256": "978915e841dc89971e5290de5407f18e88801f0eeb9090053bab6433a38c4c8e",
+      "bytes": 3681,
+      "critical": true
+    },
+    "schemas/project.schema.json": {
+      "sha256": "d681bad0d1ac04d4541ab53030a6b1a818116af282afa4bd68ca18bfae1d8758",
+      "bytes": 3827,
+      "critical": true
+    },
+    "scripts/error-hints.json": {
+      "sha256": "4fb86d3cb3555f391dea035e91c4b48330683d34035d53ea92265a2c00ce70d2",
+      "bytes": 12175,
+      "critical": true
+    },
+    "scripts/nacl_core.py": {
+      "sha256": "03b8420c1f6f107f99a71f625a0b8f315372786b17172ff91734615d929a89cc",
+      "bytes": 78087,
+      "critical": true
+    },
+    "scripts/nacl_ui.py": {
+      "sha256": "f94e4f2278cdf8d91df6526e6dd3d0cd88d82caeecd0a4e0abb7c16284114954",
+      "bytes": 7025,
+      "critical": true
+    },
+    "scripts/page-tool.mjs": {
+      "sha256": "9f58dd57cee897b44a74eed0da92a265842787d9ad7b394b08afa26704e6b41f",
+      "bytes": 10835,
+      "critical": true
+    },
+    "tests/test_tools.py": {
+      "sha256": "348bc75caf06f5ad599a2cf96e0e55a19377a11a1e23f8e43cce1d82057ce65e",
+      "bytes": 35394,
+      "critical": false
+    }
+  },
+  "counts": {
+    "files": 149,
+    "bytes": 904732
+  }
+}

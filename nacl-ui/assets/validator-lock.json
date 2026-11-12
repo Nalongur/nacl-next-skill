@@ -1,0 +1,7 @@
+{
+  "method": "sha256 of authoritative schema and starter generated validator files",
+  "pageSchemaSha256": "978915e841dc89971e5290de5407f18e88801f0eeb9090053bab6433a38c4c8e",
+  "projectSchemaSha256": "d681bad0d1ac04d4541ab53030a6b1a818116af282afa4bd68ca18bfae1d8758",
+  "pageValidatorSha256": "963d4d873ecd27920c06c6c981403547de59de8f75fd662c3fe32aaaf8bd8273",
+  "projectValidatorSha256": "a9177a4b6e1c937bd8aee4da0682567e07b9f620f4aa22ddcb0b8318f10c1720"
+}

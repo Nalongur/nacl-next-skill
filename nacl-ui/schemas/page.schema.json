@@ -1,0 +1,168 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nacl-next.local/schema/page.schema.json",
+  "title": "NaCL Next page contract",
+  "description": "Structural schema for a rendered page. Semantic checks (registry, bindings, actions, mode) live in src/validation/validate-page.mjs; both gates run before mount.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "mode",
+    "layout",
+    "title",
+    "theme",
+    "blocks"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "mode": {
+      "enum": [
+        "a",
+        "b",
+        "d"
+      ]
+    },
+    "layout": {
+      "enum": [
+        "sidebar",
+        "studio",
+        "nacl"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80
+    },
+    "theme": {
+      "$ref": "#/$defs/theme"
+    },
+    "blocks": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 24,
+      "items": {
+        "$ref": "#/$defs/block"
+      }
+    },
+    "navigationVersion": {
+      "const": 1
+    }
+  },
+  "$defs": {
+    "theme": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "accent",
+        "density",
+        "radius",
+        "font",
+        "colorScheme"
+      ],
+      "properties": {
+        "accent": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "density": {
+          "enum": [
+            "comfortable",
+            "compact"
+          ]
+        },
+        "radius": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 24
+        },
+        "font": {
+          "enum": [
+            "system",
+            "serif",
+            "mono"
+          ]
+        },
+        "colorScheme": {
+          "enum": [
+            "dark"
+          ]
+        }
+      }
+    },
+    "block": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "slot",
+        "component"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]{1,40}$"
+        },
+        "slot": {
+          "enum": [
+            "nav",
+            "main",
+            "aside",
+            "top",
+            "left",
+            "center",
+            "bottom",
+            "right"
+          ]
+        },
+        "component": {
+          "type": "string",
+          "pattern": "^[A-Z][A-Za-z0-9]{1,32}$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 60
+        },
+        "bindings": {
+          "type": "object",
+          "maxProperties": 8,
+          "additionalProperties": {
+            "type": "string",
+            "pattern": "^[a-z][a-zA-Z0-9-]*(\\.[a-z][a-zA-Z0-9-]*)+$"
+          }
+        },
+        "actions": {
+          "type": "object",
+          "maxProperties": 10,
+          "additionalProperties": {
+            "type": "string",
+            "pattern": "^[a-z][a-zA-Z0-9-]*(\\.[a-z][a-zA-Z0-9-]*)+$"
+          }
+        },
+        "params": {
+          "type": "object",
+          "maxProperties": 12,
+          "additionalProperties": {
+            "type": [
+              "boolean",
+              "integer",
+              "string"
+            ]
+          }
+        },
+        "page": {
+          "enum": [
+            "home",
+            "instances",
+            "logs",
+            "settings"
+          ]
+        }
+      }
+    }
+  }
+}

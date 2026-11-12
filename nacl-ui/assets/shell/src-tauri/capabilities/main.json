@@ -1,0 +1,6 @@
+{
+  "identifier": "s1-shell-main",
+  "description": "S1 shell main window. IPC surface is the app's own typed commands gated by capability re-checks; the event permissions are the minimal set the smoke page needs to subscribe to task-update and stop listening.",
+  "windows": ["main"],
+  "permissions": ["core:event:allow-listen", "core:event:allow-unlisten"]
+}

@@ -1,0 +1,239 @@
+{
+  "schemaVersion": 1,
+  "layout": "nacl",
+  "title": "NaCL",
+  "theme": {
+    "accent": "#59d4d1",
+    "density": "comfortable",
+    "radius": 10,
+    "font": "system",
+    "colorScheme": "dark"
+  },
+  "blocks": [
+    {
+      "id": "host-preferences",
+      "slot": "main",
+      "component": "HostPreferences",
+      "title": "新实例默认设置",
+      "bindings": {},
+      "actions": { "load": "host.preferences.get", "save": "host.preferences.save" },
+      "params": {},
+      "page": "settings"
+    },
+    {
+      "id": "identity-microsoft",
+      "slot": "nav",
+      "component": "MicrosoftIdentity",
+      "title": "正版身份",
+      "modes": [
+        "a",
+        "d"
+      ],
+      "bindings": {
+        "account": "microsoft.account"
+      },
+      "actions": {
+        "refresh": "microsoft.refresh",
+        "beginLogin": "microsoft.login.begin",
+        "completeLogin": "microsoft.login.complete",
+        "cancelLogin": "microsoft.login.cancel",
+        "logout": "microsoft.logout"
+      },
+      "params": {
+        "showConfigHint": true
+      },
+      "page": "home"
+    },
+    {
+      "id": "identity-local",
+      "slot": "nav",
+      "component": "LocalProfiles",
+      "title": "本地档案",
+      "modes": [
+        "b",
+        "d"
+      ],
+      "bindings": {
+        "items": "profiles.items",
+        "selected": "profiles.selected"
+      },
+      "actions": {
+        "select": "profiles.select",
+        "refresh": "profiles.refresh",
+        "create": "profiles.create",
+        "rename": "profiles.rename",
+        "delete": "profiles.delete"
+      },
+      "params": {
+        "allowCreate": true,
+        "allowRename": true,
+        "allowDelete": true
+      },
+      "page": "home"
+    },
+    {
+      "id": "identity-picker",
+      "slot": "nav",
+      "component": "IdentityPicker",
+      "title": "本次启动身份",
+      "modes": [
+        "d"
+      ],
+      "bindings": {
+        "account": "microsoft.account",
+        "profiles": "profiles.items",
+        "selectedKind": "identity.selectedKind",
+        "effective": "identity.effective"
+      },
+      "actions": {
+        "refresh": "identity.refresh",
+        "select": "identity.select"
+      },
+      "params": {
+        "showTrust": true
+      },
+      "page": "home"
+    },
+    {
+      "id": "instances",
+      "slot": "nav",
+      "component": "InstanceList",
+      "title": "实例",
+      "bindings": {
+        "items": "instances.items",
+        "selected": "instances.selected",
+        "deleted": "instances.deleted"
+      },
+      "actions": {
+        "select": "instances.select",
+        "refresh": "instances.refresh",
+        "create": "instances.create",
+        "duplicate": "instances.duplicate",
+        "delete": "instances.delete",
+        "restore": "instances.restore",
+        "purge": "instances.purge"
+      },
+      "params": {
+        "allowCreate": true,
+        "allowDelete": true,
+        "allowRestore": true,
+        "allowDuplicate": true
+      },
+      "page": "instances"
+    },
+    {
+      "id": "launch",
+      "slot": "main",
+      "component": "LaunchPanel",
+      "title": "启动检查",
+      "bindings": {
+        "instance": "instances.selectedInstance",
+        "identity": "identity.effective",
+        "preview": "preview.current"
+      },
+      "actions": {
+        "resolve": "launch.resolve",
+        "start": "launch.start",
+        "viewLog": "logs.select"
+      },
+      "params": {
+        "showJava": true,
+        "emphasis": "standard"
+      },
+      "page": "home"
+    },
+    {
+      "id": "tasks",
+      "slot": "main",
+      "component": "TaskMonitor",
+      "title": "任务与事件",
+      "bindings": {
+        "tasks": "tasks.items",
+        "subscription": "tasks.subscription"
+      },
+      "actions": {
+        "refresh": "tasks.refresh",
+        "status": "tasks.status",
+        "resubscribe": "tasks.resubscribe"
+      },
+      "params": {
+        "maxItems": 6,
+        "showSubscription": true
+      },
+      "page": "home"
+    },
+    {
+      "id": "logs",
+      "slot": "main",
+      "component": "LogViewer",
+      "title": "日志",
+      "bindings": {
+        "items": "logs.items",
+        "selected": "logs.selected",
+        "content": "logs.content"
+      },
+      "actions": {
+        "refresh": "logs.refresh",
+        "read": "logs.read",
+        "select": "logs.select"
+      },
+      "params": {
+        "autoLoadFirst": true,
+        "visibleLines": 160
+      },
+      "page": "logs"
+    },
+    {
+      "id": "details",
+      "slot": "aside",
+      "component": "InstanceDetails",
+      "title": "实例详情",
+      "bindings": {
+        "instance": "instances.selectedInstance"
+      },
+      "actions": {
+        "refresh": "instances.refresh",
+        "rename": "instances.rename"
+      },
+      "params": {
+        "showPaths": true
+      },
+      "page": "instances"
+    },
+    {
+      "id": "java",
+      "slot": "aside",
+      "component": "JavaPanel",
+      "title": "Java 运行时",
+      "bindings": {
+        "instance": "instances.selectedInstance",
+        "detected": "java.detected"
+      },
+      "actions": {
+        "detect": "java.detect",
+        "set": "instances.update-java",
+        "auto": "instances.java-auto",
+        "inspect": "java.inspect"
+      },
+      "params": {
+        "allowManualPath": true
+      },
+      "page": "instances"
+    },
+    {
+      "id": "instance-settings",
+      "slot": "aside",
+      "component": "InstanceSettings",
+      "title": "内存与窗口",
+      "bindings": {
+        "instance": "instances.selectedInstance"
+      },
+      "actions": {
+        "save": "instances.update-settings",
+        "saveAdvanced": "instances.update-advanced"
+      },
+      "page": "instances"
+    }
+  ],
+  "navigationVersion": 1
+}

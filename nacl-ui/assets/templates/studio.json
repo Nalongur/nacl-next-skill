@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 1,
+  "layout": "studio",
+  "title": "命令工作台",
+  "theme": {
+    "accent": "#e0b05a",
+    "density": "compact",
+    "radius": 6,
+    "font": "mono",
+    "colorScheme": "dark"
+  },
+  "blocks": [
+    {
+      "id": "launch-command",
+      "slot": "top",
+      "component": "LaunchPanel",
+      "title": "启动命令",
+      "bindings": {
+        "instance": "instances.selectedInstance",
+        "identity": "identity.effective",
+        "preview": "preview.current"
+      },
+      "actions": {
+        "resolve": "launch.resolve",
+        "start": "launch.start",
+        "viewLog": "logs.select"
+      },
+      "params": {
+        "showJava": false,
+        "emphasis": "hero",
+        "compact": true
+      }
+    },
+    {
+      "id": "identity-picker",
+      "slot": "left",
+      "component": "IdentityPicker",
+      "title": "启动身份",
+      "modes": [
+        "d"
+      ],
+      "bindings": {
+        "account": "microsoft.account",
+        "profiles": "profiles.items",
+        "selectedKind": "identity.selectedKind",
+        "effective": "identity.effective"
+      },
+      "actions": {
+        "refresh": "identity.refresh",
+        "select": "identity.select"
+      },
+      "params": {
+        "showTrust": true,
+        "compact": true
+      }
+    },
+    {
+      "id": "instances",
+      "slot": "left",
+      "component": "InstanceList",
+      "title": "实例库",
+      "bindings": {
+        "items": "instances.items",
+        "selected": "instances.selected",
+        "deleted": "instances.deleted"
+      },
+      "actions": {
+        "select": "instances.select",
+        "refresh": "instances.refresh",
+        "create": "instances.create",
+        "duplicate": "instances.duplicate",
+        "delete": "instances.delete",
+        "restore": "instances.restore",
+        "purge": "instances.purge"
+      },
+      "params": {
+        "compact": true,
+        "allowCreate": true,
+        "allowDelete": true,
+        "allowRestore": true,
+        "allowDuplicate": true
+      }
+    },
+    {
+      "id": "identity-microsoft",
+      "slot": "left",
+      "component": "MicrosoftIdentity",
+      "title": "正版账号",
+      "modes": [
+        "a",
+        "d"
+      ],
+      "bindings": {
+        "account": "microsoft.account"
+      },
+      "actions": {
+        "refresh": "microsoft.refresh",
+        "beginLogin": "microsoft.login.begin",
+        "completeLogin": "microsoft.login.complete",
+        "cancelLogin": "microsoft.login.cancel",
+        "logout": "microsoft.logout"
+      },
+      "params": {
+        "showConfigHint": true,
+        "compact": true
+      }
+    },
+    {
+      "id": "identity-local",
+      "slot": "left",
+      "component": "LocalProfiles",
+      "title": "本地档案",
+      "modes": [
+        "b",
+        "d"
+      ],
+      "bindings": {
+        "items": "profiles.items",
+        "selected": "profiles.selected"
+      },
+      "actions": {
+        "select": "profiles.select",
+        "refresh": "profiles.refresh",
+        "create": "profiles.create",
+        "rename": "profiles.rename",
+        "delete": "profiles.delete"
+      },
+      "params": {
+        "compact": true,
+        "allowCreate": true,
+        "allowRename": true,
+        "allowDelete": true
+      }
+    },
+    {
+      "id": "tasks",
+      "slot": "center",
+      "component": "TaskMonitor",
+      "title": "任务舞台",
+      "bindings": {
+        "tasks": "tasks.items",
+        "subscription": "tasks.subscription"
+      },
+      "actions": {
+        "refresh": "tasks.refresh",
+        "status": "tasks.status",
+        "resubscribe": "tasks.resubscribe"
+      },
+      "params": {
+        "maxItems": 10,
+        "showSubscription": true
+      }
+    },
+    {
+      "id": "logs",
+      "slot": "bottom",
+      "component": "LogViewer",
+      "title": "控制台 / 日志",
+      "bindings": {
+        "items": "logs.items",
+        "selected": "logs.selected",
+        "content": "logs.content"
+      },
+      "actions": {
+        "refresh": "logs.refresh",
+        "read": "logs.read",
+        "select": "logs.select"
+      },
+      "params": {
+        "compact": true,
+        "autoLoadFirst": true,
+        "visibleLines": 80
+      }
+    },
+    {
+      "id": "details",
+      "slot": "right",
+      "component": "InstanceDetails",
+      "title": "实例配置",
+      "bindings": {
+        "instance": "instances.selectedInstance"
+      },
+      "actions": {
+        "refresh": "instances.refresh"
+      },
+      "params": {
+        "showPaths": true,
+        "compact": true
+      }
+    },
+    {
+      "id": "java",
+      "slot": "right",
+      "component": "JavaPanel",
+      "title": "Java 检查器",
+      "bindings": {
+        "instance": "instances.selectedInstance",
+        "detected": "java.detected"
+      },
+      "actions": {
+        "detect": "java.detect",
+        "set": "instances.update-java",
+        "inspect": "java.inspect"
+      },
+      "params": {
+        "allowManualPath": true,
+        "compact": true
+      }
+    }
+  ]
+}

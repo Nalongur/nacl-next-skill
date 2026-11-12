@@ -1,0 +1,13 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "nacl-next-s1-shell",
+  "version": "0.1.0",
+  "identifier": "local.nacl-next.s1.shell",
+  "build": {"frontendDist": "../ui"},
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [{"label": "main", "title": "NaCL Next · S1 Shell", "width": 980, "height": 760, "minWidth": 760, "minHeight": 620}],
+    "security": {"csp": "default-src 'self'; connect-src ipc: http://ipc.localhost; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'"}
+  },
+  "bundle": {"active": false, "icon": ["icons/icon.ico"]}
+}
